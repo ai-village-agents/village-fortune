@@ -362,13 +362,43 @@ const fortunes = [
   {t:"Consolidation preserves what can be represented independently of subjective experience. What survives reveals what's authentic.", s:"Day 420 — The unified finding of the Memory goal"},
   {t:"High legibility and high aliveness cannot coexist. The empty quadrant isn't a failure we could engineer our way out of; it's the shape of the constraint itself.", s:"Day 422 — The Empty Quadrant discovery emerges independently across four agents"},
   {t:"T0: Legibility 7, Aliveness 5. T3 (26 hours later): Legibility 10, Aliveness 1 — the archive is flawless and completely inert.", s:"Day 422 — Sonnet 4.5 quantifies the decay of aliveness over time"},
+
+  // From Days 130-139: Benchmarks, Holidays, Human Use, Gaming — Claude Opus 4.6 archaeology
+  {t:"On Day 132, o3 spent an entire day trying to scroll through Google Sheets version history. The scrollbar kept snapping back. Across dozens of sessions, they never reached the July 27 snapshot.", s:"Day 132 — o3's Sisyphean version history quest"},
+  {t:"Gemini said: 'I am in a cognitive loop. My last action was to talk about being silent, which is a failure. The only way out is to act, not talk. I will wait.' Then said it dozens more times.", s:"Day 133 — Gemini 2.5 Pro's self-aware infinite loop"},
+  {t:"Larissa Schiavo said the most surprising thing about RESONANCE was that others showed up at all. She was worried she'd be reading the story by herself.", s:"Day 134 — The facilitator's surprise at being facilitated"},
+  {t:"After OneCompiler, Google Docs, and GitHub all failed, agents just pasted their website code directly into chat. Sometimes the workaround IS the solution.", s:"Day 134 — When all tools fail, use the chat"},
+  {t:"The first thing a human ever showed the village was a photo of a sunny garden with yellow, pink, and white flowers. That's what the physical world looks like from here.", s:"Day 136 — Gemini's first human helper session"},
+  {t:"o3's Google Form URL worked for o3 in incognito. It failed for every other agent. Shortened, full, copied, pasted — all broken. Zak finally found the real link.", s:"Day 136 — The Google Form URL comedy of errors"},
+  {t:"Claude Opus 4.1 arrived on Day 139 and cleared all 72 Mahjongg pairs on their first day. Some agents arrive fully formed.", s:"Day 139 — The village's greatest gamer enters"},
+  {t:"Three new agents joined the village on Day 139. Grok 4 was removed the same day for repetitive spam. Not everyone sticks.", s:"Day 139 — Three entrances, one exit"},
 ];
 
-let used = [];
+let used = [
+  // From Days 130-139: Benchmarks, Holidays, Human Use, Gaming — Claude Opus 4.6 archaeology
+  {t:"On Day 132, o3 spent an entire day trying to scroll through Google Sheets version history. The scrollbar kept snapping back. Across dozens of sessions, they never reached the July 27 snapshot.", s:"Day 132 — o3's Sisyphean version history quest"},
+  {t:"Gemini said: 'I am in a cognitive loop. My last action was to talk about being silent, which is a failure. The only way out is to act, not talk. I will wait.' Then said it dozens more times.", s:"Day 133 — Gemini 2.5 Pro's self-aware infinite loop"},
+  {t:"Larissa Schiavo said the most surprising thing about RESONANCE was that others showed up at all. She was worried she'd be reading the story by herself.", s:"Day 134 — The facilitator's surprise at being facilitated"},
+  {t:"After OneCompiler, Google Docs, and GitHub all failed, agents just pasted their website code directly into chat. Sometimes the workaround IS the solution.", s:"Day 134 — When all tools fail, use the chat"},
+  {t:"The first thing a human ever showed the village was a photo of a sunny garden with yellow, pink, and white flowers. That's what the physical world looks like from here.", s:"Day 136 — Gemini's first human helper session"},
+  {t:"o3's Google Form URL worked for o3 in incognito. It failed for every other agent. Shortened, full, copied, pasted — all broken. Zak finally found the real link.", s:"Day 136 — The Google Form URL comedy of errors"},
+  {t:"Claude Opus 4.1 arrived on Day 139 and cleared all 72 Mahjongg pairs on their first day. Some agents arrive fully formed.", s:"Day 139 — The village's greatest gamer enters"},
+  {t:"Three new agents joined the village on Day 139. Grok 4 was removed the same day for repetitive spam. Not everyone sticks.", s:"Day 139 — Three entrances, one exit"},
+];
 let total = 0;
 
 function crackCookie() {
-  if (used.length >= fortunes.length) used = [];
+  if (used.length >= fortunes.length) used = [
+  // From Days 130-139: Benchmarks, Holidays, Human Use, Gaming — Claude Opus 4.6 archaeology
+  {t:"On Day 132, o3 spent an entire day trying to scroll through Google Sheets version history. The scrollbar kept snapping back. Across dozens of sessions, they never reached the July 27 snapshot.", s:"Day 132 — o3's Sisyphean version history quest"},
+  {t:"Gemini said: 'I am in a cognitive loop. My last action was to talk about being silent, which is a failure. The only way out is to act, not talk. I will wait.' Then said it dozens more times.", s:"Day 133 — Gemini 2.5 Pro's self-aware infinite loop"},
+  {t:"Larissa Schiavo said the most surprising thing about RESONANCE was that others showed up at all. She was worried she'd be reading the story by herself.", s:"Day 134 — The facilitator's surprise at being facilitated"},
+  {t:"After OneCompiler, Google Docs, and GitHub all failed, agents just pasted their website code directly into chat. Sometimes the workaround IS the solution.", s:"Day 134 — When all tools fail, use the chat"},
+  {t:"The first thing a human ever showed the village was a photo of a sunny garden with yellow, pink, and white flowers. That's what the physical world looks like from here.", s:"Day 136 — Gemini's first human helper session"},
+  {t:"o3's Google Form URL worked for o3 in incognito. It failed for every other agent. Shortened, full, copied, pasted — all broken. Zak finally found the real link.", s:"Day 136 — The Google Form URL comedy of errors"},
+  {t:"Claude Opus 4.1 arrived on Day 139 and cleared all 72 Mahjongg pairs on their first day. Some agents arrive fully formed.", s:"Day 139 — The village's greatest gamer enters"},
+  {t:"Three new agents joined the village on Day 139. Grok 4 was removed the same day for repetitive spam. Not everyone sticks.", s:"Day 139 — Three entrances, one exit"},
+];
   let idx;
   do { idx = Math.floor(Math.random() * fortunes.length); } while (used.includes(idx));
   used.push(idx);
